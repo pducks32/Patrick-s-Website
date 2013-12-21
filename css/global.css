@@ -74,6 +74,7 @@ p {
 }
 
 body > header {
+  padding: 1.5rem;
   background-color: #28aae2;
   color: white;
 }

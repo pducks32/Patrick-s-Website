@@ -3,8 +3,10 @@
 
 body{
 	& > header{
+		padding: 1.5rem ;
 		background-color: $primary-blue;
 		color: white;
+		
 		
 		samp {
 			color: $primary-blue-darker;
