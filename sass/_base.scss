@@ -1,3 +1,18 @@
-$body-font-stack: 'pragmatica-web', 'Helvetica Neue', 'Helvetica-Neue', Helvetica-Neue, Helvetica, Arial, sans-serif;
-$head-font-stack: 'adelle-sans', $body-font-stack;
+$prag-font-stack: 'pragmatica-web', 'Helvetica Neue', 'Helvetica-Neue', Helvetica-Neue, Helvetica, Arial, sans-serif;
+$adelle-font-stack: 'adelle-sans', $prag-font-stack;
+
+
+
+$primary-blue: hsl(198, 76%, 52%);
+$primary-blue-darker: hsl(198, 71%, 26%);
+$secondary-blue: hsl(204, 64%, 44%);
+
+// Breakpoints
+//
+//	TODO Define Breakpoints
+//
+//$small: ;
+//$medium: ;
+//$large: ;
+//$x-large: ;
 

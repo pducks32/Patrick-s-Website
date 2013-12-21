@@ -1,1 +1,13 @@
-@import "base";
+@import "compass/reset";
+@import "typography";
+
+body{
+	& > header{
+		background-color: $primary-blue;
+		color: white;
+		
+		samp {
+			color: $primary-blue-darker;
+		}
+	}
+}

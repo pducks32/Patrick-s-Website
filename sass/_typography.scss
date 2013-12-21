@@ -1,0 +1,21 @@
+@import "base";
+
+html{
+	font-size: 100%;
+}
+body {
+	line-height: 1.5rem;
+	font-family: $prag-font-stack;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $adelle-font-stack;
+}
+
+p{
+	line-height: 1.5rem;
+	font: {
+		size: 1rem;
+		family: inherit;
+	}
+}
