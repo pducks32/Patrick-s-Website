@@ -5,4 +5,4 @@
 .DS_Store
 
 # Ignore CSS
-*.css*
+*css*
