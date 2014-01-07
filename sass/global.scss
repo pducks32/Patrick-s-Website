@@ -1,3 +1,267 @@
 @import "compass/reset";
 @import "typography";
-@import "test";
+
+*{
+	box-sizing: border-box;
+}
+body > header {
+	margin: 0;
+	padding: 1em 1rem; //1rem
+	font-size: 1.4em;
+	background: $primary-blue;
+	text-align: center;
+	overflow: hidden;
+	color: white;
+	i {
+		@extend h2;
+		display: block;
+		font: {
+			weight: 900;
+			family: $prag-font-stack;
+		}
+		margin-bottom: -0.535em;
+		vertical-align: middle;
+		color: $primary-blue-darker;
+		letter-spacing: -0.0505em;
+	}
+		span {
+			font-weight: normal;
+			font-family: $prag-font-stack;
+			vertical-align: 15%;
+		}
+	code {
+		margin: 0 auto;
+		font-size: 1em; //1rem
+		color: white;
+		
+		kbd {
+			
+			color: $primary-blue-darker;
+		}
+		
+	}
+	h1 {
+		margin-top: 1.4rem;
+		line-height: 1;
+		margin-bottom: 0.4rem !important;
+		font-size: 2.75em;
+		&::first-line {
+			font-size: 1.2em;
+		}
+	}
+	p {
+		margin: 0 1em -2em;
+		color: $primary-blue-darker; 
+	}
+}
+hr.triangles {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: $blue_two;
+	border: none;
+	left: 50%;
+	padding: 0;
+	margin: 0;
+	-webkit-transform: translateX(-50%) translateY(110%) rotate(45deg);
+	transform: translateX(-50%) translateY(110%) rotate(45deg);
+}
+section {
+	padding: 1em;
+	background-color: $blue_two;
+	header h2 {
+		margin-bottom: 0rem;
+	}
+	.resume {
+		text-align: center;
+		background-color: white;
+		padding: 1em;
+		max-width: 1000px;
+		margin: 0 auto;
+		hr {
+			border: 2px solid black;
+			
+		}
+		.header {
+			width: 66.66%;
+			margin: 1rem auto 0rem;
+			h4 {
+				//border-bottom: 1px solid black;
+				margin-bottom: 0rem;
+			}
+		}
+		div::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		i {
+			display: block;
+			font-size: 2.4em;
+			line-height: 1;
+			margin-bottom: 0em;
+		}
+		.school {
+			display: inline-block;
+			float: left;
+			clear: left;
+			font-size: 0.8181em;
+		}
+		.year {
+			display: inline-block;
+			float: right;
+			clear: right;
+			font-size: 0.8181em;
+		}
+		
+		dl {
+			dt {
+				float: left;
+				padding: 0;
+				margin-top: 1em;
+				clear: left;
+				width: 80%;
+				color: white;
+				overflow: hidden;
+				text-align: left;
+				position: relative;
+				.lang {
+					position: relative;
+					z-index: 9999;
+					margin: 0 0 0 0.5em;
+					line-height: 0;
+					
+				}
+				.meter {
+					display: inline-block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					vertical-align: baseline;
+					z-index: 0;
+					height: 1.4em;
+					animation: meterMove 2s linear 5s;
+					-webkit-animation: meterMove 2s linear;
+				}
+			}
+			dd {
+				float: right;
+				margin-top: 1em;
+				clear: right;
+				width: 15%;
+				& + dd {
+					text-align: left;
+					float: left;
+					margin-top: 0;
+					clear: left;
+					width: 100%;
+					color: hsla(0, 0%, 0%, 0.6) !important;
+					font-style: italic;
+					font-size: 0.5em;
+					
+				}
+			}
+			&::after {
+				content: '.';
+				display: table;
+				clear: both;
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+#clouds{
+	background-color: $blue_two;
+	path {
+		fill: #ECF0F1;
+		stroke: #ECF0F1;
+	}
+}
+[data-icon="treehouse"] {
+	width: 10px;
+	height: 1em;
+	svg {
+		width: 1em;
+		height: 1em;
+	}
+}
+svg {
+	display: block;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+footer {
+background: #ECF0F1;
+color: #777;
+text-align: center;
+padding: 1.6em;
+dd {
+	display: none;
+}
+}
+
+
+
+
+@keyframes meterMove {
+	0% {margin-left: -110%;}
+	100% {left: 0;}
+}
+@-webkit-keyframes meterMove {
+	0% {margin-right: 110%;}
+	100% {margin-right: 0%;}
+}
+
+
+@include lang-bar(html, $red, 100%);
+@include lang-bar(css, $orange, 100%);
+@include lang-bar(js, $yellow, 80%);
+@include lang-bar(php, $green, 90%);
+@include lang-bar(ruby, $teal, 85%);
+@include lang-bar(java, $blue, 75%);
+@include lang-bar(c, $navy, 80%);
+@include lang-bar(processing, $purple, 60%);
+@include lang-bar(go, pink, 50%);
+
+@media screen and (min-width: 500px) {
+
+	.year, .school {
+		font-size: 1.2em !important;
+	}
+}
+
+@media screen and (min-width: 680px) {
+	//body { font-size: 124%; }
+	body > header {
+		font-size: 1.618em;
+		i {
+			font-size: 3.2em;
+		}
+		code {
+			font-size: 1.4em;
+		}
+		h1 {
+			margin-bottom: 0.438em;
+		}
+		
+	}
+	.resume {
+		font-size: 1.2em;
+		padding: 1.618em !important;
+	}
+}
+@media screen and (min-width: 1024px) {
+	body > header {
+		font-size: 2em;
+		.triangles {
+			width: 250px;
+			height: 250px;
+			
+		}
+	}
+	.resume {
+		padding: 3.2em !important;
+	}
+}

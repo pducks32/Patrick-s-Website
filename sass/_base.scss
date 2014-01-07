@@ -12,6 +12,26 @@ $blue_three:hsl(204, 64%, 44%);
 $blue_four: hsl(204, 79%, 32%);
 $orange-one: rgba(211, 84, 0,1.0);
 
-$phi: 1.618;
+$red: rgba(231, 76, 60,1.0);
+$orange: rgba(230, 126, 34,1.0);
+$yellow: rgba(241, 196, 15,1.0);
+$green: rgba(46, 204, 113,1.0);
+$teal: rgba(26, 188, 156,1.0);
+$blue: rgba(52, 152, 219,1.0);
+$navy: rgba(52, 73, 94,1.0);
+$purple: rgba(155, 89, 182,1.0);
+
+@mixin lang-bar($tag, $color, $width) {
+	.#{$tag} {
+		border-bottom: 4px solid $color;
+		.meter {
+			background-color: $color;
+			width: $width;
+		}
+		& + dd {
+			color: $color;
+		}
+	}
+}
 
 
