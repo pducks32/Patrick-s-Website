@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             sass: {
-                files: ['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}'],
+                files: ['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}, sass/modules/*.{sass, scss}'],
                 tasks: ['compass:dev']
             },
             livereload: {

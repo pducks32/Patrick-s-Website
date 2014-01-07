@@ -1,0 +1,228 @@
+$html: rgba(231, 76, 60,1.0);
+$css: rgba(230, 126, 34,1.0);
+$php: rgba(241, 196, 15,1.0);
+$ruby: rgba(46, 204, 113,1.0);
+$js: rgba(26, 188, 156,1.0);
+$java: rgba(52, 152, 219,1.0);
+$c: rgba(52, 73, 94,1.0);
+$processing: rgba(155, 89, 182,1.0);
+$go: rgba(231, 76, 60,1.0);
+
+//rgba(26, 188, 156,1.0)
+//rgba(52, 152, 219,1.0)
+//rgba(155, 89, 182,1.0)
+//rgba(231, 76, 60,1.0)
+
+dt, dl, dd {
+	transition: all 2s ease-in-out;
+}
+
+
+.languages {
+	
+
+
+dt {
+	float: left;
+	width: 15%;
+	clear: both;
+	
+	margin-right: 5%;
+	&.long { display: none; } //Don't Display Long Name in Compact Mode
+	
+}
+dd {
+	float: left;
+	width: 80%;
+	dt {
+		position: absolute;
+		color: rgba(255, 255, 255, 0.4);
+		margin-left: 2px;
+		margin-top: 2px;
+		
+		z-index: 10;
+
+	}
+	meter {
+		width: 100%;
+		//width: attr(data-value);
+		position: relative;
+		-webkit-appearance: none; /* Reset appearance */
+		border: 1px solid #fff;
+		border-radius: 0px;
+		font-size: 1.0em;
+		height: 1.4em;
+		
+		
+		&::after{
+			content: attr(value) + attr(title);
+			position: absolute;
+			
+			font-size: 1em;
+			right: 0px;
+			top: 0%;
+			z-index: 100;
+			
+		}
+	}
+	dd {
+		//flex: 1;
+		width: 100%;
+		meter::-webkit-meter-optimum-value {
+		    background-size: 100% 100%;
+		}
+	}
+	dl {
+		width: 100%;
+		display: flex;
+		&:hover, &:active {
+			display: block;
+			dt, dt.long {
+				display: block;
+				position: relative;
+				color: black;
+				width: 100%;
+			}
+			.short, .Short {
+				display: none;
+			}
+		};
+	}
+}
+}
+
+[data-lang="HTML"]{
+	color: $html;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $html;
+		}
+	}
+}
+
+[data-lang="CSS"]{
+	color: $css;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $css;
+		}
+	}
+	[data-subset="Sass"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($css, -20%) !important;
+		}
+	[data-subset="Less"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($css, -40%) !important;
+		}
+}
+
+[data-lang="Php"]{
+	color: $php;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $php;
+		}
+	}
+}
+[data-lang="Ruby"]{
+	color: $ruby;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $ruby;
+		}
+	}
+	[data-subset="RoR"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($ruby, -20%) !important;
+		}
+}
+[data-lang="Javascript"]{
+	color: $js;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $js;
+		}
+	}
+	[data-subset="JQuery"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($js, -20%) !important;
+		}
+}
+[data-lang="Java"]{
+	color: $java;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $java;
+		}
+	}
+}
+[data-lang="C"]{
+	color: $c;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $c;
+		}
+	}
+	[data-subset="C++"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($c, -20%) !important;
+		}
+	[data-subset="C#"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($c, -40%) !important;
+		}
+	[data-subset="Objective-C"] meter::-webkit-meter-optimum-value {
+			background-color: adjust-saturation($c, -60%) !important;
+		}
+				
+}
+[data-lang="Processing"]{
+	color: $processing;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $processing;
+		}
+	}
+}
+[data-lang="Go"]{
+	color: $go;
+	& meter {
+		color: white;
+		&::-webkit-meter-optimum-value {
+			box-shadow: none;
+			background-image: none;
+			background-color: $go;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
